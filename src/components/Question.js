@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+
 import '../App.css';
 
 const style = {
@@ -7,15 +9,32 @@ const style = {
 }
 
 class Question extends Component {
+  constructor(props) {
+    super(props);
+    console.log(this.props.questionData);
+  }
   render() {
+    const data = this.props.questionData;
+    const preview = data.preview;
+    
     return (
-      <div>
-        <header className="Question-header">
-          {this.props.questionData.title}
-        </header>
-        <p className="App-intro">
-          {this.props.questionData.subreddit_name_prefixed}
-        </p>
+      <div >
+        {data.preview ?
+          <Card>
+            <CardMedia>
+              <img src={data.url} alt="" />
+            </CardMedia>
+            <CardTitle
+              title={data.title}
+              subtitle={"Author:" +  data.author}
+            />
+            
+          </Card>
+          :
+          
+          <div>lmao no fokkin preview</div>
+          
+        }
       </div>
     );
   }

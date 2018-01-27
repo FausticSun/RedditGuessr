@@ -11,7 +11,7 @@ const style = {
   width: '400px',
   height: '600px',
   position: 'absolute',
-  top: "20%",
+  top: "5%",
   left: "5%",
   
 }
@@ -28,6 +28,7 @@ class QuestionScreen extends Component {
     this.state = {
       currentQn : 0
     };
+    console.log(this.props.questions[this.state.currentQn].data);
   }
   componentDidMount(){
     this.props.dispatch(clearScore());
@@ -63,10 +64,11 @@ class QuestionScreen extends Component {
   render() {
     return (
       <div style={fullscreen}>
+        <header className="Question-header">
+          Question Number ({this.state.currentQn+1}) and you have {this.props.score} right
+        </header>
+  
         <Paper style={style} className="App">
-          <header className="Question-header">
-            Question Number ({this.state.currentQn+1}) and you have {this.props.score} right
-          </header>
           <Question questionData={this.props.questions[this.state.currentQn].data} />
         </Paper>
         <Options

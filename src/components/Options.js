@@ -4,17 +4,12 @@ import '../App.css';
 
 const styles = {
   button: {
-    margin: 12,
+    margin: 5%,
   },
-  exampleImageInput: {
-    cursor: 'pointer',
+  wrapper: {
     position: 'absolute',
-    top: 0,
-    bottom: 0,
-    right: 0,
-    left: 0,
-    width: '100%',
-    opacity: 0,
+    width: "40%",
+    height: "30%",
   },
 };
 
@@ -28,7 +23,7 @@ class Options extends Component {
     const submitWrong = this.props.submitWrong;
     
     return (
-      <div>
+      <div style={styles.wrapper}>
         {this.props.options.map(function(obj){
             if(obj.isCorrect) {
               return (
