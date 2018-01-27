@@ -30,4 +30,11 @@ class App extends Component {
   }
 }
 
-export default connect(state => state)(App);
+const mapStateToProps = state => {
+  return {
+    posts: state.reddit.posts,
+    isLoadingPosts: state.reddit.isLoadingPosts,
+  }
+}
+
+export default connect(mapStateToProps)(App);

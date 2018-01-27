@@ -9,7 +9,7 @@ export function fetchRedditPosts() {
         [RSAA]: {
             endpoint: 'http://www.reddit.com/r/popular.json?limit=100',
             method: 'GET',
-            types: ['REQUEST', 'SUCCESS', 'FAILURE']
+            types: [REQUEST, SUCCESS, FAILURE]
         }
     }
 }
