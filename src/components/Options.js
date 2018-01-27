@@ -4,14 +4,16 @@ import '../App.css';
 
 const styles = {
   button: {
-    margin: "5%"
+    padding:'1%',
+    width: "42%",
+    height: "20%",
+    margin: "3%"
+    
   },
   wrapper: {
-    position: 'absolute',
-    width: "40%",
-    height: "30%",
-    left: "55%",
-    top: "20%",
+    width: "80%",
+    height: "50%",
+    
   },
 };
 
@@ -31,6 +33,7 @@ class Options extends Component {
             if(obj.isCorrect) {
               return (
                 <RaisedButton
+                  key={obj.srName}
                   label={obj.srName}
                   labelPosition="before"
                   style={styles.button}
@@ -40,6 +43,7 @@ class Options extends Component {
             } else{
               return (
                 <RaisedButton
+                  key={obj.srName}
                   label={obj.srName}
                   labelPosition="before"
                   style={styles.button}

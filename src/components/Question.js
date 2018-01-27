@@ -4,11 +4,14 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import '../App.css';
 
 const style = {
-  
-  maxHeight: '80vh'
+  fixedHeight: {
+    maxHeight: '75vh',
+    overflow: 'hidden'
+  }
 };
 
 const visibleStyle = {
+  width:'100%',
   visibility: 'visible'
 };
 
@@ -38,6 +41,8 @@ class Question extends Component {
         {data.preview ?
           <Card>
             <CardMedia>
+              <a href={data.url} target="_blank">
+              <div style={style.fixedHeight}>
               {data.preview.images[0].variants.gif ?
                 <img
                   style={ this.state.isLoading ? hiddenStyle : visibleStyle }
@@ -54,6 +59,8 @@ class Question extends Component {
                   onLoad={this.handleGifLoaded}
                 />
               }
+              </div>
+              </a>
             </CardMedia>
             <CardTitle
               title={data.title}

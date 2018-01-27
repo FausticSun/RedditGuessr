@@ -11,17 +11,33 @@ import shuffle from 'lodash/shuffle';
 
 const subredditSimilarity = require('../constants/SubredditSimilarity.json');  
 
-const style = {
-  width: '400px',
-  height: '600px',
-  position: 'absolute',
-  top: "5%",
-  left: "5%",
+const styles = {
+  questionStyle : {
+    width: '80%',
+    alignSelf: 'center',
+    top: "5%",
+    left: "5%"
+  },
+  leftWrapper : {
+    display: 'flex',
+    justifyContent: 'center',
+    width: "48%"
+  },
+  rightWrapper : {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    width: "48%"
+  }
+  
 }
 
 const fullscreen = {
   width: "100%",
   height: "100%",
+  display: "flex",
+  flexDirection: "row wrap",
+  justifyContent: "space-around"
 }
 
 const wrong = [{srName:"Wrong1"},{srName:"Wrong2"},{srName:"Wrong3"}];
@@ -70,19 +86,23 @@ class QuestionScreen extends Component {
   render() {
     return (
       <div style={fullscreen}>
-        <header className="Question-header">
-          Question Number ({this.state.currentQn+1}) and you have {this.props.score} right
-        </header>
+        <div style={styles.leftWrapper}>
+          <Paper style={styles.questionStyle} className="App">
+            <Question questionData={this.props.questions[this.state.currentQn].data} />
+          </Paper>
+        </div>
+        <div style={styles.rightWrapper}>
+          <header className="Question-header">
+            Question Number ({this.state.currentQn+1}) and you have {this.props.score} right
+          </header>
   
-        <Paper style={style} className="App">
-          <Question questionData={this.props.questions[this.state.currentQn].data} />
-        </Paper>
-        <Options
-          submitWrong={this.submitWrong}
-          submitCorrect={this.submitCorrect}
-          options={shuffle(this.rngOptions(this.props.questions[this.state.currentQn].data.subreddit, this.getWrongAnswers()))}
-          correctAns={this.props.questions[this.state.currentQn].data.subreddit}
-        />
+          <Options
+            submitWrong={this.submitWrong}
+            submitCorrect={this.submitCorrect}
+            options={shuffle(this.rngOptions(this.props.questions[this.state.currentQn].data.subreddit, this.getWrongAnswers()))}
+            correctAns={this.props.questions[this.state.currentQn].data.subreddit}
+          />
+        </div>
       </div>
     );
   }
