@@ -17,7 +17,7 @@ class HomeScreen extends Component {
             <Paper style={style} className="App">
                 <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-                <h1 className="App-title">Welcome to React</h1>
+                <h1 className="App-title">RedditGuessr</h1>
                 </header>
                 <RaisedButton
                   label="Start Game!"
