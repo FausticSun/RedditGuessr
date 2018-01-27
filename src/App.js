@@ -10,7 +10,7 @@ class App extends Component {
     this.props.dispatch(fetchRedditPosts());
     this.props.dispatch(changePage("Home"));
   }
-  startGame(){
+  startGame = () => {
     console.log("Sth");
     this.props.dispatch(changePage("Question"));
   }
@@ -23,9 +23,9 @@ class App extends Component {
       case "Home":
         page = (<HomeScreen startGame={this.startGame}/>);
         break;
-      // case "Question":
-      //   page = (<Question questionData={this.props.posts}/>);
-      //   break;
+      case "Question":
+        page = (<Question questionData={this.props.posts[0].data}/>);
+        break;
       default:
         page = null;
     }

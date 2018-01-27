@@ -13,14 +13,14 @@ const style = {
 class Question extends Component {
   render() {
     return (
-      <div>
+      <Paper style={style} className="App">
         <header className="Question-header">
-          {this.props.questionData[0].title}
+          {this.props.questionData.title}
         </header>
         <p className="App-intro">
-          {this.props.questionData[0].subreddit_name_prefixed}
+          {this.props.questionData.subreddit_name_prefixed}
         </p>
-      </div>
+      </Paper>
     );
   }
 }
