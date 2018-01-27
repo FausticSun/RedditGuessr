@@ -1,0 +1,436 @@
+{
+    "subreddits": [
+        {
+            "name": "BlackPeopleTwitter",
+            "similar": ["Tinder", "starterpacks", "cringepics", "4chan", "cringe"]
+        },
+        {
+            "name": "EarthPorn",
+            "similar": ["AbandonedPorn", "spaceporn", "itookapicture", "CityPorn", "CozyPlaces"]
+        },
+        {
+            "name": "Whatcouldgowrong",
+            "similar": ["nononono", "instant_regret", "holdmybeer", "nonononoyes", "Wellthatsucks"]
+        },
+        {
+            "name": "gifs",
+            "similar": ["funny", "WTF", "pics", "mildlyinteresting", "reactiongifs"]
+        },
+        {
+            "name": "science",
+            "similar": ["askscience", "Futurology", "dataisbeautiful", "EverythingScience", "TrueReddit"]
+        },
+        {
+            "name": "mildlyinfuriating",
+            "similar": ["CrappyDesign", "Unexpected", "oddlysatisfying", "mildlyinteresting", "facepalm"]
+        },
+        {
+            "name": "science",
+            "similar": ["askscience", "Futurology", "dataisbeautiful", "EverythingScience", "TrueReddit"]
+        },
+        {
+            "name": "news",
+            "similar": ["politics", "todayilearned", "TheOnion", "worldnews", "PoliticalDiscussion"]
+        },
+        {
+            "name": "woahdude",
+            "similar": ["interestingasfuck", "oddlysatisfying", "Unexpected", "Damnthatsinteresting", "nonononoyes"]
+        },
+        {
+            "name": "PublicFreakout",
+            "similar": ["JusticePorn", "cringe", "rage", "JusticeServed", "pussypassdenied"]
+        },
+        {
+            "name": "ProgrammerHumor",
+            "similar": ["shittyprogramming", "programming", "linux", "coding", "softwaregore"]
+        },
+        {
+            "name": "aww",
+            "similar": ["cats", "popping", "BeforeNAfterAdoption", "catpictures", "dogpictures"]
+        },
+        {
+            "name": "funny",
+            "similar": ["pics", "AdviceAnimals", "WTF", "gifs", "mildlyinteresting"]
+        },
+        {
+            "name": "PoliticalHumor",
+            "similar": ["worldpolitics", "Liberal", "progressive", "democrats", "POLITIC"]
+        },
+        {
+            "name": "niceguys",
+            "similar": ["justneckbeardthings", "cringepics", "thatHappened", "iamverysmart", "creepyPMs"]
+        },
+        {
+            "name": "2meirl4meirl",
+            "similar": ["TooMeIrlForMeIrl", "meirl", "ledootgeneration", "dankmemes", "madlads"]
+        },
+        {
+            "name": "DungeonsAndDragons",
+            "similar": ["loremasters", "UnearthedArcana", "rpg", "characterdrawing", "DnDBehindTheScreen"]
+        },
+        {
+            "name": "Tinder",
+            "similar": ["BlackPeopleTwitter", "seduction", "cringepics", "ImGoingToHellForThis", "trashy"]
+        },
+        {
+            "name": "assholedesign",
+            "similar": ["softwaregore", "itsaunixsystem", "engrish", "shittyrobots", "CrappyDesign"]
+        },
+        {
+            "name": "PeopleFuckingDying",
+            "similar": ["DadReflexes", "youseeingthisshit", "gifsthatkeepongiving", "NatureIsFuckingLit", "BetterEveryLoop"]
+        },
+        {
+            "name": "wholesomememes",
+            "similar": ["rarepuppers", "youtubecomments", "2meirl4meirl", "reversegif", "CommercialCuts"]
+        },
+        {
+            "name": "gaming",
+            "similar": ["Games", "darksouls", "witcher", "fo4", "skyrim"]
+        },
+        {
+            "name": "comics",
+            "similar": ["HighQualityGifs", "behindthegifs", "wheredidthesodago", "CrazyIdeas", "Unexpected"]
+        },
+        {
+            "name": "CozyPlaces",
+            "similar": ["HybridAnimals", "ArchitecturePorn", "DesirePath", "SkyPorn", "TheWayWeWere"]
+        },
+        {
+            "name": "Eyebleach",
+            "similar": ["AnimalsBeingBros", "AnimalsBeingJerks", "AnimalsBeingDerps", "MadeMeSmile", "HumansBeingBros"]
+        },
+        {
+            "name": "worldnews",
+            "similar": ["europe", "todayilearned", "news", "geopolitics", "Futurology"]
+        },
+        {
+            "name": "Damnthatsinteresting",
+            "similar": ["oddlysatisfying", "nonononoyes", "PerfectTiming", "interestingasfuck", "educationalgifs"]
+        },
+        {
+            "name": "tifu",
+            "similar": ["Showerthoughts", "Jokes", "nosleep", "offmychest", "TalesFromRetail"]
+        },
+        {
+            "name": "LifeProTips",
+            "similar": ["YouShouldKnow", "lifehacks", "Frugal", "explainlikeimfive", "EatCheapAndHealthy"]
+        },
+        {
+            "name": "MemeEconomy",
+            "similar": ["CryptoCurrency", "FinancialCareers", "wallstreetbets", "business", "Economics"]
+        },
+        {
+            "name": "malelivingspace",
+            "similar": ["malefashionadvice", "BuyItForLife", "minimalism", "InteriorDesign", "photography"]
+        },
+        {
+            "name": "oddlysatisfying",
+            "similar": ["Unexpected", "interestingasfuck", "nonononoyes", "woahdude", "instant_regret"]
+        },
+        {
+            "name": "madlads",
+            "similar": ["OopsDidntMeanTo", "KenM", "youdontsurf", "oldpeoplefacebook", "FellowKids"]
+        },
+        {
+            "name": "MadeMeSmile",
+            "similar": ["HumansBeingBros", "Eyebleach", "AnimalsBeingBros", "StartledCats", "AnimalsBeingJerks"]
+        },
+        {
+            "name": "MurderedByWords",
+            "similar": ["im14andthisisdeep", "iamverysmart", "thatHappened", "tumblr", "oldpeoplefacebook"]
+        },
+        {
+            "name": "NatureIsFuckingLit",
+            "similar": ["youseeingthisshit", "gifsthatkeepongiving", "BigCatGifs", "gifsthatendtoosoon", "thecatdimension"]
+        },
+        {
+            "name": "OSHA",
+            "similar": ["nononono", "DiWHY", "ThingsCutInHalfPorn", "Whatcouldgowrong", "holdmybeer"]
+        },
+        {
+            "name": "Music",
+            "similar": ["vinyl", "radiohead", "indieheads", "LetsTalkMusic", "WeAreTheMusicMakers"]
+        },
+        {
+            "name": "MMA",
+            "similar": ["Boxing", "sports", "ufc", "nba", "sportsbook"]
+        },
+        {
+            "name": "instant_regret",
+            "similar": ["Whatcouldgowrong", "Unexpected", "nonononoyes", "nononono", "holdmybeer"]
+        },
+        {
+            "name": "dadjokes",
+            "similar": ["firstworldanarchists", "ShittyLifeProTips", "ofcoursethatsathing", "CrazyIdeas", "notinteresting"]
+        },
+        {
+            "name": "reallifedoodles",
+            "similar": ["nevertellmetheodds", "shittyrobots", "perfectloops", "Perfectfit", "combinedgifs"]
+        },
+        {
+            "name": "rarepuppers",
+            "similar": ["MEOW_IRL", "doggos", "dogs", "blop", "woof_irl"]
+        },
+        {
+            "name": "videos",
+            "similar": ["funny", "todayilearned", "WTF", "worldnews", "PublicFreakout"]
+        },
+        {
+            "name": "catpranks",
+            "similar": ["StoppedWorking", "StartledCats", "hitmanimals", "thisismylifenow", "Thisismylifemeow"]
+        },
+        {
+            "name": "gifsthatkeepongiving",
+            "similar": ["youseeingthisshit", "NatureIsFuckingLit", "gifsthatendtoosoon", "gifextra", "oddlyterrifying"]
+        },
+        {
+            "name": "food",
+            "similar": ["FoodPorn", "Cooking", "slowcooking", "recipes", "shittyfoodporn"]
+        },
+        {
+            "name": "todayilearned",
+            "similar": ["news", "explainlikeimfive", "pics", "worldnews", "nottheonion"]
+        },
+        {
+            "name": "Wellthatsucks",
+            "similar": ["Whatcouldgowrong", "nononono", "nonononoyes", "instant_regret", "holdmybeer"]
+        },
+        {
+            "name": "thatHappened",
+            "similar": ["justneckbeardthings", "iamverysmart", "CringeAnarchy", "im14andthisisdeep", "quityourbullshit"]
+        },
+        {
+            "name": "programming",
+            "similar": ["webdev", "coding", "ProgrammerHumor", "compsci", "learnprogramming"]
+        },
+        {
+            "name": "2healthbars",
+            "similar": ["gifs", "Unexpected", "BossFight", "interestingasfuck", "wellthatsucks"]
+        },
+        {
+            "name": "interestingasfuck",
+            "similar": ["woahdude", "oddlysatisfying", "Unexpected", "Whatcouldgowrong", "mildlyinteresting"]
+        },
+        {
+            "name": "AnimalsBeingBros",
+            "similar": ["AnimalsBeingJerks", "Eyebleach", "StartledCats", "HumansBeingBros", "AnimalsBeingDerps"]
+        },
+        {
+            "name": "QuotesPorn",
+            "similar": ["HistoryPorn", "quotes", "Foodforthought", "PoliticalHumor", "bestof"]
+        },
+        {
+            "name": "holdmybeer",
+            "similar": ["Whatcouldgowrong", "nononono", "nonononoyes", "instant_regret", "Wellthatsucks"]
+        },
+        {
+            "name": "Unexpected",
+            "similar": ["oddlysatisfying", "instant_regret", "nonononoyes", "Whatcouldgowrong", "interestingasfuck"]
+        },
+        {
+            "name": "JusticeServed",
+            "similar": ["JusticePorn", "Whatcouldgowrong", "nononono", "instant_regret", "PublicFreakout"]
+        },
+        {
+            "name": "LivestreamFail",
+            "similar": ["Twitch", "LivestreamFails", "GlobalOffensive", "Overwatch", "PUBATTLEGROUNDS"]
+        },
+        {
+            "name": "MonsterHunter",
+            "similar": ["fireemblem", "ffxiv", "anime", "gaming", "pokemon"]
+        },
+        {
+            "name": "gatekeeping",
+            "similar": ["iamverybadass", "iamverysmart", "FellowKids", "ComedyCemetery", "dankchristianmemes"]
+        },
+        {
+            "name": "justneckbeardthings",
+            "similar": ["thatHappened", "iamverysmart", "CringeAnarchy", "im14andthisisdeep", "niceguys"]
+        },
+        {
+            "name": "lifehacks",
+            "similar": ["interestingasfuck", "Damnthatsinteresting", "oddlysatisfying", "LifeProTips", "YouShouldKnow"]
+        },
+        {
+            "name": "UnethicalLifeProTips",
+            "similar": ["LifeProTips", "YouShouldKnow", "RedditForGrownups", "lifehacks", "Frugal"]
+        },
+        {
+            "name": "noisygifs",
+            "similar": ["holdmyjuicebox", "MyPeopleNeedMe", "perfectloops", "BetterEveryLoop", "Pareidolia"]
+        },
+        {
+            "name": "blunderyears",
+            "similar": ["badtattoos", "cringepics", "ExpectationVsReality", "shittyfoodporn", "trashy"]
+        },
+        {
+            "name": "BikiniBottomTwitter",
+            "similar": ["ledootgeneration", "madlads", "FellowKids", "circlejerk", "ComedyCemetery"]
+        },
+        {
+            "name": "TheOnion",
+            "similar": ["news", "Futurology", "worldpolitics", "worldnews", "conspiracy"]
+        },
+        {
+            "name": "worldnews",
+            "similar": ["todayilearned", "TheOnion", "geopolitics", "worldpolitics", "Futurology"]
+        },
+        {
+            "name": "yesyesyesyesno",
+            "similar": ["AnimalTextGifs", "traingifs", "StoppedWorking", "bitchimabus", "StopTouchingMe"]
+        },
+        {
+            "name": "LearnUselessTalents",
+            "similar": ["educationalgifs", "BeAmazed", "Damnthatsinteresting", "coolguides", "chemicalreactiongifs"]
+        },
+        {
+            "name": "sewing",
+            "similar": ["crochet", "knitting", "TheGirlSurvivalGuide", "quilting", "CrossStitch"]
+        },
+        {
+            "name": "reactiongifs",
+            "similar": ["Unexpected", "HighQualityGifs", "interestingasfuck", "woahdude", "oddlysatisfying"]
+        },
+        {
+            "name": "PrequelMemes",
+            "similar": ["SequelMemes", "Anthologymemes", "bankingclanmemes", "Raimimemes", "StarWars"]
+        },
+        {
+            "name": "surrealmemes",
+            "similar": ["shitCubedPeopleSay", "minimalisticmemes", "wholesomesurrealmemes", "blandmemesofreality", "napkinmemes"]
+        },
+        {
+            "name": "polandball",
+            "similar": ["vexillology", "paradoxplaza", "eu4", "CrusaderKings", "ShitAmericansSay"]
+        },
+        {
+            "name": "boottoobig",
+            "similar": ["meirl", "blackpeopletwitter", "pornhubpoems", "smoobypost", "rarepuppers"]
+        },
+        {
+            "name": "holdmybeer",
+            "similar": ["Whatcouldgowrong", "nononono", "nonononoyes", "instant_regret", "Wellthatsucks"]
+        },
+        {
+            "name": "cableporn",
+            "similar": ["cablefail", "techsupportmacgyver", "techsupportgore", "networking", "electronics"]
+        },
+        {
+            "name": "succulents",
+            "similar": ["sewing", "crochet", "parrots", "knitting", "crafts"]
+        },
+        {
+            "name": "firstworldanarchists",
+            "similar": ["Unexpected ", "oddlysatisfying", "CrappyDesign", "ofcoursethatsathing", "youdontsurf"]
+        },
+        {
+            "name": "CryptoCurrency",
+            "similar": ["Monero", "bitcoin", "ethereum", "btc", "ethtrader"]
+        },
+        {
+            "name": "tumblr",
+            "similar": ["me_irl", "im14andthisisdeep", "iamverysmart", "FellowKids", "thatHappened"]
+        },
+        {
+            "name": "ANormalDayInRussia",
+            "similar": ["nonononoyes", "IdiotsFightingThings", "instant_regret", "nononono", "Whatcouldgowrong"]
+        },
+        {
+            "name": "AskReddit",
+            "similar": ["relationships", "AskWomen", "CasualConversation", "offmychest", "Advice"]
+        },
+        {
+            "name": "brushybrushy",
+            "similar": ["thecatdimension", "aww_gifs", "NamFlashbacks", "mlem", "NamFlashbacks"]
+        },
+        {
+            "name": "vandwellers",
+            "similar": ["TinyHouses", "camping", "homestead", "BuyItForLife", "CampingandHiking"]
+        },
+        {
+            "name": "AnimalsBeingDerps",
+            "similar": ["StartledCats", "Eyebleach", "AnimalsBeingBros", "AnimalsBeingJerks", "awwwtf"]
+        },
+        {
+            "name": "facepalm",
+            "similar": ["quityourbullshit", "mildlyinfuriating", "cringepics", "rage", "thatHappened"]
+        },
+        {
+            "name": "therewasanattempt",
+            "similar": ["nevertellmetheodds", "thisismylifenow", "ChildrenFallingOver", "BetterEveryLoop", "Pareidolia"]
+        },
+        {
+            "name": "BeAmazed",
+            "similar": ["Damnthatsinteresting", "nonononoyes", "Wellthatsucks", "nevertellmetheodds", "ChildrenFallingOver"]
+        },
+        {
+            "name": "terriblefacebookmemes",
+            "similar": ["im14andthisisdeep", "FellowKids", "ComedyCemetery", "thatHappened", "shitpost"]
+        },
+        {
+            "name": "iamverybadass",
+            "similar": ["OopsDidntMeanTo", "madlads", "dankchristianmemes", "4PanelCringe", "ComedyCemetery"]
+        },
+        {
+            "name": "trashy",
+            "similar": ["badtattoos", "cringepics", "MorbidReality", "awfuleverything", "ghettoglamourshots"]
+        },
+        {
+            "name": "ChoosingBeggars",
+            "similar": ["whiteknighting", "sadcringe", "OopsDidntMeanTo", "Justfuckmyshitup", "quityourbullshit"]
+        },
+        {
+            "name": "mildlyinteresting",
+            "similar": ["mildlyinfuriating", "interestingasfuck", "oddlysatisfying", "Unexpected", "woahdude"]
+        },
+        {
+            "name": "nononono",
+            "similar": ["Whatcouldgowrong", "holdmybeer", "nonononoyes", "instant_regret", "Wellthatsucks"]
+        },
+        {
+            "name": "Justfuckmyshitup",
+            "similar": ["OopsDidntMeanTo", "whitepeoplegifs", "firstworldanarchists", "instant_regret", "IdiotsFightingThings"]
+        },
+        {
+            "name": "whitepeoplegifs",
+            "similar": ["instant_regret", "Unexpected", "Justfuckmyshitup", "ChildrenFallingOver", "IdiotsFightingThings"]
+        },
+        {
+            "name": "IdiotsFightingThings",
+            "similar": ["nonononoyes", "Wellthatsucks", "Whatcouldgowrong", "holdmybeer", "instant_regret"]
+        },
+        {
+            "name": "ChildrenFallingOver",
+            "similar": ["nevertellmetheodds", "IdiotsFightingThings", "therewasanattempt", "nonononoyes", "Wellthatsucks"]
+        },
+        {
+            "name": "thisismylifenow",
+            "similar": ["therewasanattempt", "thisismylifemeow", "StartledCats", "StoppedWorking", "BetterEveryLoop"]
+        },
+        {
+            "name": "StoppedWorking",
+            "similar": ["catpranks", "StartledCats", "AnimalTextGifs", "hitmanimals", "thisismylifenow"]
+        },
+        {
+            "name": "technology",
+            "similar": ["tech", "gadgets", "Futurology", "geek", "cordcutters"]
+        },
+        {
+            "name": "movies",
+            "similar": ["television", "StarWars", "comicbookmovies", "marvelstudios", "DC_Cinematic"]
+        },
+        {
+            "name": "anime_irl",
+            "similar": ["awwnime", "anime", "animegifs", "animemes", "animenocontext"]
+        },
+        {
+            "name": "starterpacks",
+            "similar": ["FellowKids", "justneckbeardthings", "CringeAnarchy", "im14andthisisdeep", "terriblefacebookmemes"]
+        },
+        {
+            "name": "bestof",
+            "similar": ["dataisbeautiful", "nottheonion", "IAmA", "TrueReddit", "OutOfTheLoop"]
+        }
+    ]
+}
