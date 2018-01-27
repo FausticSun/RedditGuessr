@@ -3,22 +3,33 @@ import { connect } from 'react-redux';
 import { fetchRedditPosts } from './actions/RedditActions';
 import { changePage } from './actions/RoutingActions';
 import HomeScreen from './components/HomeScreen';
+import Question from './components/Question';
 
 class App extends Component {
   componentDidMount() {
     this.props.dispatch(fetchRedditPosts());
     this.props.dispatch(changePage("Home"));
   }
-
+  startGame(){
+    console.log("Sth");
+    this.props.dispatch(changePage("Question"));
+  }
   render() {
   let page = null;
+  if (this.props.isLoadingPosts) {
+    page = null;
+  } else {
     switch (this.props.page) {
       case "Home":
-        page = (<HomeScreen />); break;
+        page = (<HomeScreen startGame={this.startGame}/>);
+        break;
+      // case "Question":
+      //   page = (<Question questionData={this.props.posts}/>);
+      //   break;
       default:
         page = null;
     }
-    
+  }
     return (
       [page]
     );
