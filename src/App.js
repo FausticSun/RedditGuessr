@@ -1,31 +1,26 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchRedditPosts } from './actions/RedditActions';
-import Paper from 'material-ui/Paper'
-import logo from './logo.svg';
-import './App.css';
-
-const style = {
-  width: '270px',
-  height: '480px'
-}
+import { changePage } from './actions/RoutingActions';
+import HomeScreen from './components/HomeScreen';
 
 class App extends Component {
   componentDidMount() {
     this.props.dispatch(fetchRedditPosts());
+    this.props.dispatch(changePage("Home"));
   }
 
   render() {
+  let page = null;
+    switch (this.props.page) {
+      case "Home":
+        page = (<HomeScreen />); break;
+      default:
+        page = null;
+    }
+    
     return (
-      <Paper style={style} className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </Paper>
+      [page]
     );
   }
 }
@@ -34,6 +29,7 @@ const mapStateToProps = state => {
   return {
     posts: state.reddit.posts,
     isLoadingPosts: state.reddit.isLoadingPosts,
+    page: state.router.page
   }
 }
 
