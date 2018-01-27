@@ -30,7 +30,7 @@ class Options extends Component {
             if(obj.isCorrect) {
               return (
                 <RaisedButton
-                  label={obj.srName + " " + obj.isCorrect}
+                  label={obj.srName}
                   labelPosition="before"
                   style={styles.button}
                   containerElement="label"
@@ -39,7 +39,7 @@ class Options extends Component {
             } else{
               return (
                 <RaisedButton
-                  label={obj.srName + " " + obj.isCorrect}
+                  label={obj.srName}
                   labelPosition="before"
                   style={styles.button}
                   containerElement="label"
