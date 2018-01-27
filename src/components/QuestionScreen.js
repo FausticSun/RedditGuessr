@@ -6,6 +6,9 @@ import Options from './Options';
 import { connect } from 'react-redux';
 import { clearScore, incScore } from '../actions/ScoreActions';
 import { changePage } from '../actions/RoutingActions';
+import sampleSize from 'lodash/sampleSize';
+
+const subredditSimilarity = require('../constants/SubredditSimilarity.json');  
 
 const style = {
   width: '400px',
@@ -13,15 +16,14 @@ const style = {
   position: 'absolute',
   top: "5%",
   left: "5%",
-  
 }
 
 const fullscreen = {
   width: "100%",
   height: "100%",
 }
+
 const wrong = [{srName:"Wrong1"},{srName:"Wrong2"},{srName:"Wrong3"}];
-const wrong2 = ["Wrong1","Wrong2","Wrong3"];
 class QuestionScreen extends Component {
   constructor(props){
     super(props);
@@ -35,17 +37,20 @@ class QuestionScreen extends Component {
   }
   rngOptions(correctSubreddit, wrongSubreddits){
     var correctSub = { srName : correctSubreddit, isCorrect : true};
-    // var wrongSubs = [];
-    var lolSubs = wrongSubreddits.map(function(obj){
-      var rObj = {};
-      rObj["srName"] = obj.srName;
-      rObj["isCorrect"] = false;
-      return rObj;
-    });
-    lolSubs.push(correctSub);
-    // console.log(lolSubs);
-    return lolSubs;
+    var subOptions = wrongSubreddits.map(name => ({
+      srName: name,
+      isCorrect: false
+    }));
+    subOptions.push(correctSub);
+    return subOptions;
   }
+  getWrongAnswers = () => {
+    return sampleSize(
+      subredditSimilarity.subreddits.find(subreddit =>
+        subreddit.name === this.props.questions[this.state.currentQn].data.subreddit).similar,
+      3);
+  }
+
   submitCorrect = () => {
     this.props.dispatch(incScore());
     this.incQuestion();
@@ -74,7 +79,7 @@ class QuestionScreen extends Component {
         <Options
           submitWrong={this.submitWrong}
           submitCorrect={this.submitCorrect}
-          options={this.rngOptions(this.props.questions[this.state.currentQn].data.subreddit, wrong)}
+          options={this.rngOptions(this.props.questions[this.state.currentQn].data.subreddit, this.getWrongAnswers())}
           correctAns={this.props.questions[this.state.currentQn].data.subreddit}
         />
       </div>
