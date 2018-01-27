@@ -20,6 +20,7 @@ class Options extends Component {
     super(props);
     console.log(this.props);
   }
+  
   render() {
     const submitCorrect = this.props.submitCorrect;
     const submitWrong = this.props.submitWrong;

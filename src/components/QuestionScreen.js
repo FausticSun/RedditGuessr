@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { clearScore, incScore } from '../actions/ScoreActions';
 import { changePage } from '../actions/RoutingActions';
 import sampleSize from 'lodash/sampleSize';
+import shuffle from 'lodash/shuffle';
 
 const subredditSimilarity = require('../constants/SubredditSimilarity.json');  
 
@@ -79,7 +80,7 @@ class QuestionScreen extends Component {
         <Options
           submitWrong={this.submitWrong}
           submitCorrect={this.submitCorrect}
-          options={this.rngOptions(this.props.questions[this.state.currentQn].data.subreddit, this.getWrongAnswers())}
+          options={shuffle(this.rngOptions(this.props.questions[this.state.currentQn].data.subreddit, this.getWrongAnswers()))}
           correctAns={this.props.questions[this.state.currentQn].data.subreddit}
         />
       </div>
