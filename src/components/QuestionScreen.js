@@ -5,6 +5,8 @@ import Question from './Question';
 import Options from './Options';
 import { connect } from 'react-redux';
 import { clearScore, incScore } from '../actions/ScoreActions';
+import { changePage } from '../actions/RoutingActions';
+
 const style = {
   width: '400px',
   height: '600px',
@@ -24,7 +26,7 @@ class QuestionScreen extends Component {
   constructor(props){
     super(props);
     this.state = {
-      currentQn : 1
+      currentQn : 0
     };
   }
   componentDidMount(){
@@ -45,17 +47,25 @@ class QuestionScreen extends Component {
   }
   submitCorrect = () => {
     this.props.dispatch(incScore());
-    this.setState({ currentQn: this.state.currentQn + 1});
+    this.incQuestion();
   }
   submitWrong = () => {
-    this.setState({ currentQn: this.state.currentQn + 1});
+    this.incQuestion();
+  }
+  incQuestion = () =>{
+    console.log(this.state.currentQn);
+    if (this.state.currentQn < 9) {
+      this.setState({currentQn: this.state.currentQn + 1});
+    } else {
+      this.props.dispatch(changePage("ScoreScreen"));
+    }
   }
   render() {
     return (
       <div style={fullscreen}>
         <Paper style={style} className="App">
           <header className="Question-header">
-            Question Number ({this.state.currentQn}) and you have {this.props.score} right
+            Question Number ({this.state.currentQn+1}) and you have {this.props.score} right
           </header>
           <Question questionData={this.props.questions[this.state.currentQn].data} />
         </Paper>

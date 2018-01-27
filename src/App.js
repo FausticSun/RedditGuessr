@@ -38,6 +38,8 @@ class App extends Component {
           score={this.props.score}
         />);
         break;
+      case "ScoreScreen":
+        page = (<HomeScreen startGame={this.startGame}/>);
       default:
         page = null;
     }
