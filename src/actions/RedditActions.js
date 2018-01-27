@@ -7,7 +7,7 @@ export const FAILURE = 'FETCH_FAILURE';
 export function fetchRedditPosts() {
     return {
         [RSAA]: {
-            endpoint: 'http://www.reddit.com/r/popular.json',
+            endpoint: 'http://www.reddit.com/r/popular.json?limit=100',
             method: 'GET',
             types: ['REQUEST', 'SUCCESS', 'FAILURE']
         }
