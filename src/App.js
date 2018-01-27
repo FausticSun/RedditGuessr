@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchRedditPosts } from './actions/RedditActions';
 import { changePage } from './actions/RoutingActions';
+import LoadingScreen from './components/LoadingScreen';
 import HomeScreen from './components/HomeScreen';
 import Question from './components/Question';
 
 class App extends Component {
   componentDidMount() {
     this.props.dispatch(fetchRedditPosts());
-    this.props.dispatch(changePage("Home"));
+    this.props.dispatch(changePage("LoadingScreen"));
   }
   startGame = () => {
-    console.log("Sth");
     this.props.dispatch(changePage("Question"));
   }
   render() {
@@ -20,6 +20,9 @@ class App extends Component {
     page = null;
   } else {
     switch (this.props.page) {
+      case "Loading":
+        page = (<LoadingScreen />);
+        break;
       case "Home":
         page = (<HomeScreen startGame={this.startGame}/>);
         break;
