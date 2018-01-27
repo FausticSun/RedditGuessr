@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (!this.props.isLoadingPosts) {
+    if (prevProps.isLoadingPosts && !this.props.isLoadingPosts) {
       this.props.dispatch(changePage("HomeScreen"));
     }
   }
@@ -21,6 +21,7 @@ class App extends Component {
   startGame = () => {
     this.props.dispatch(changePage("QuestionScreen"));
   }
+
   render() {
     let page = null;
     switch (this.props.page) {
