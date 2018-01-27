@@ -26,7 +26,7 @@ class QuestionScreen extends Component {
   constructor(props){
     super(props);
     this.state = {
-      currentQn : 0
+      currentQn : 0,
     };
     console.log(this.props.questions[this.state.currentQn].data);
   }
@@ -54,13 +54,13 @@ class QuestionScreen extends Component {
     this.incQuestion();
   }
   incQuestion = () =>{
-    console.log(this.state.currentQn);
     if (this.state.currentQn < 9) {
       this.setState({currentQn: this.state.currentQn + 1});
     } else {
       this.props.dispatch(changePage("ScoreScreen"));
     }
   }
+
   render() {
     return (
       <div style={fullscreen}>
