@@ -1,14 +1,15 @@
 import { combineReducers } from 'redux'
-import { SUCCESS } from '../actions/RedditActions';
+import { SUCCESS, LOADING_COMPLETE } from '../actions/RedditActions';
 
 const subredditSimilarity = require('../constants/SubredditSimilarity.json');
 
-function posts(state = null, action) {
+function posts(state = [], action) {
   switch (action.type) {
     case SUCCESS:
-      return action.payload.data.children.filter(post =>
+      return [...state,
+        ...action.payload.data.children.filter(post =>
         subredditSimilarity.subreddits.find(subreddit =>
-          subreddit.name === post.data.subreddit) !== undefined);
+          subreddit.name === post.data.subreddit) !== undefined)];
     default:
       return state;
   }
@@ -16,7 +17,7 @@ function posts(state = null, action) {
 
 function isLoadingPosts(state = true, action) {
   switch (action.type) {
-    case SUCCESS:
+    case LOADING_COMPLETE:
       return false;
     default:
       return state;
