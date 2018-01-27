@@ -3,6 +3,8 @@ import Paper from 'material-ui/Paper'
 import '../App.css';
 import Question from './Question';
 import Options from './Options';
+import { connect } from 'react-redux';
+import { clearScore, incScore } from '../actions/ScoreActions';
 const style = {
   width: '400px',
   height: '600px',
@@ -22,9 +24,11 @@ class QuestionScreen extends Component {
   constructor(props){
     super(props);
     this.state = {
-      score : 0,
       currentQn : 1
     };
+  }
+  componentDidMount(){
+    this.props.dispatch(clearScore());
   }
   rngOptions(correctSubreddit, wrongSubreddits){
     var correctSub = { srName : correctSubreddit, isCorrect : true};
@@ -40,7 +44,7 @@ class QuestionScreen extends Component {
     return lolSubs;
   }
   submitCorrect = () => {
-    this.setState({ score: this.state.score + 1});
+    this.props.dispatch(incScore());
     this.setState({ currentQn: this.state.currentQn + 1});
   }
   submitWrong = () => {
@@ -51,7 +55,7 @@ class QuestionScreen extends Component {
       <div style={fullscreen}>
         <Paper style={style} className="App">
           <header className="Question-header">
-            Question Number ({this.state.currentQn}) and you have {this.state.score} right
+            Question Number ({this.state.currentQn}) and you have {this.props.score} right
           </header>
           <Question questionData={this.props.questions[this.state.currentQn].data} />
         </Paper>
@@ -67,4 +71,4 @@ class QuestionScreen extends Component {
 }
 
 
-export default QuestionScreen;
+export default connect()(QuestionScreen);

@@ -33,7 +33,10 @@ class App extends Component {
         page = (<HomeScreen startGame={this.startGame}/>);
         break;
       case "QuestionScreen":
-        page = (<QuestionScreen questions={sampleSize(this.props.posts, 10)}/>);
+        page = (<QuestionScreen
+          questions={sampleSize(this.props.posts, 10)}
+          score={this.props.score}
+        />);
         break;
       default:
         page = null;
@@ -48,7 +51,8 @@ const mapStateToProps = state => {
   return {
     posts: state.reddit.posts,
     isLoadingPosts: state.reddit.isLoadingPosts,
-    page: state.router.page
+    page: state.router.page,
+    score: state.score.score
   }
 }
 
