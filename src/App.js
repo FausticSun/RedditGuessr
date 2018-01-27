@@ -11,20 +11,23 @@ class App extends Component {
     this.props.dispatch(fetchRedditPosts());
     this.props.dispatch(changePage("LoadingScreen"));
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (!this.props.isLoadingPosts) {
+      this.props.dispatch(changePage("HomeScreen"));
+    }
+  }
+
   startGame = () => {
-    console.log("Sth");
     this.props.dispatch(changePage("QuestionScreen"));
   }
   render() {
-  let page = null;
-  if (this.props.isLoadingPosts) {
-    page = null;
-  } else {
+    let page = null;
     switch (this.props.page) {
-      case "Loading":
+      case "LoadingScreen":
         page = (<LoadingScreen />);
         break;
-      case "Home":
+      case "HomeScreen":
         page = (<HomeScreen startGame={this.startGame}/>);
         break;
       case "QuestionScreen":
@@ -33,7 +36,6 @@ class App extends Component {
       default:
         page = null;
     }
-  }
     return (
       [page]
     );
