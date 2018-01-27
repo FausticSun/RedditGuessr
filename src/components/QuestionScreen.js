@@ -4,32 +4,31 @@ import { fetchRedditPosts } from '../actions/RedditActions';
 import Paper from 'material-ui/Paper'
 import logo from '../logo.svg';
 import '../App.css';
+import Question from './Question';
 
 const style = {
   width: '270px',
   height: '480px'
 }
 
-class Question extends Component {
+class QuestionScreen extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      currentQn : 1
+    };
+  }
   render() {
     return (
-      <div>
+      <Paper style={style} className="App">
         <header className="Question-header">
-          {this.props.questionData.title}
+          Question Number ({this.state.currentQn})
         </header>
-        <p className="App-intro">
-          {this.props.questionData.subreddit_name_prefixed}
-        </p>
-      </div>
+        <Question questionData={this.props.questions[this.state.currentQn].data} />
+      </Paper>
     );
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    posts: state.reddit.posts,
-    isLoadingPosts: state.reddit.isLoadingPosts,
-  }
-}
 
-export default Question;
+export default QuestionScreen;

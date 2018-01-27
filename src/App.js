@@ -4,7 +4,7 @@ import { fetchRedditPosts } from './actions/RedditActions';
 import { changePage } from './actions/RoutingActions';
 import LoadingScreen from './components/LoadingScreen';
 import HomeScreen from './components/HomeScreen';
-import Question from './components/Question';
+import QuestionScreen from './components/QuestionScreen';
 
 class App extends Component {
   componentDidMount() {
@@ -12,7 +12,8 @@ class App extends Component {
     this.props.dispatch(changePage("LoadingScreen"));
   }
   startGame = () => {
-    this.props.dispatch(changePage("Question"));
+    console.log("Sth");
+    this.props.dispatch(changePage("QuestionScreen"));
   }
   render() {
   let page = null;
@@ -26,8 +27,8 @@ class App extends Component {
       case "Home":
         page = (<HomeScreen startGame={this.startGame}/>);
         break;
-      case "Question":
-        page = (<Question questionData={this.props.posts[0].data}/>);
+      case "QuestionScreen":
+        page = (<QuestionScreen questions={this.props.posts}/>);
         break;
       default:
         page = null;
