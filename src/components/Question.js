@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchRedditPosts } from '../actions/RedditActions';
-import Paper from 'material-ui/Paper'
-import logo from '../logo.svg';
 import '../App.css';
 
 const style = {
-  width: '270px',
-  height: '480px'
+  width: '400px',
+  height: '600px'
 }
 
 class Question extends Component {
@@ -25,11 +21,5 @@ class Question extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    posts: state.reddit.posts,
-    isLoadingPosts: state.reddit.isLoadingPosts,
-  }
-}
 
 export default Question;
