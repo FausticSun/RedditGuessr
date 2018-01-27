@@ -4,12 +4,14 @@ import '../App.css';
 
 const styles = {
   button: {
-    margin: 5%,
+    margin: "5%"
   },
   wrapper: {
     position: 'absolute',
     width: "40%",
     height: "30%",
+    left: "55%",
+    top: "20%",
   },
 };
 

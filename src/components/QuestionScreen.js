@@ -74,8 +74,8 @@ class QuestionScreen extends Component {
         <Options
           submitWrong={this.submitWrong}
           submitCorrect={this.submitCorrect}
-          options={this.rngOptions(this.props.questions[this.state.currentQn].data.subreddit_name_prefixed, wrong)}
-          correctAns={this.props.questions[this.state.currentQn].data.subreddit_name_prefixed}
+          options={this.rngOptions(this.props.questions[this.state.currentQn].data.subreddit, wrong)}
+          correctAns={this.props.questions[this.state.currentQn].data.subreddit}
         />
       </div>
     );
