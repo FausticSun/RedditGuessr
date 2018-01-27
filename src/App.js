@@ -33,7 +33,7 @@ class App extends Component {
         page = (<HomeScreen startGame={this.startGame}/>);
         break;
       case "QuestionScreen":
-        page = (<QuestionScreen questions={this.props.posts}/>);
+        page = (<QuestionScreen questions={sampleSize(this.props.posts, 10)}/>);
         break;
       default:
         page = null;
