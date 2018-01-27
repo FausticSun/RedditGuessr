@@ -22,7 +22,7 @@ class Question extends Component {
         {data.preview ?
           <Card>
             <CardMedia>
-              <img src={data.url} alt="" />
+              <img src={data.preview.images[0].source.url} alt="" />
             </CardMedia>
             <CardTitle
               title={data.title}
