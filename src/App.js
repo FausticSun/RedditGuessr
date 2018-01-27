@@ -6,6 +6,7 @@ import { changePage } from './actions/RoutingActions';
 import LoadingScreen from './components/LoadingScreen';
 import HomeScreen from './components/HomeScreen';
 import QuestionScreen from './components/QuestionScreen';
+import ScoreScreen from './components/ScoreScreen';
 
 class App extends Component {
   componentDidMount() {
@@ -39,7 +40,8 @@ class App extends Component {
         />);
         break;
       case "ScoreScreen":
-        page = (<HomeScreen startGame={this.startGame}/>);
+        page = (<ScoreScreen score={this.props.score} startGame={this.startGame}/>);
+        break;
       default:
         page = null;
     }
