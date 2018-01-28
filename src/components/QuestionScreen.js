@@ -28,7 +28,7 @@ const styles = {
     justifyContent: 'center',
     flexDirection: 'column',
     width: "48%",
-    fontSize: '2em'
+    fontSize: '1.4em'
     
   },
   qnNo : {
@@ -50,7 +50,6 @@ const fullscreen = {
   justifyContent: "space-around"
 }
 
-const wrong = [{srName:"Wrong1"},{srName:"Wrong2"},{srName:"Wrong3"}];
 class QuestionScreen extends Component {
   constructor(props){
     super(props);

@@ -4,17 +4,22 @@ import '../App.css';
 
 const styles = {
   button: {
-    padding:'1%',
     width: "42%",
-    height: "20%",
-    margin: "3%"
-    
+    margin: "3%",
+    height: '50px'
   },
   wrapper: {
     width: "100%",
     height: "50%",
     
   },
+  label : {
+    fontSize:'0.6em',
+    height:'inherit',
+    display:'flex',
+    flexDirection:'column',
+    justifyContent: 'center'
+  }
 };
 
 class Options extends Component {
@@ -33,8 +38,10 @@ class Options extends Component {
             if(obj.isCorrect) {
               return (
                 <RaisedButton
+                  className="Option-button"
                   key={obj.srName}
                   label={obj.srName}
+                  labelStyle={styles.label}
                   labelPosition="before"
                   style={styles.button}
                   containerElement="label"
@@ -43,8 +50,10 @@ class Options extends Component {
             } else{
               return (
                 <RaisedButton
+                  className="Option-button"
                   key={obj.srName}
                   label={obj.srName}
+                  labelStyle={styles.label}
                   labelPosition="before"
                   style={styles.button}
                   containerElement="label"

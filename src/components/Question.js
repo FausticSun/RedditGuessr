@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 
 import '../App.css';
 
@@ -34,7 +34,6 @@ class Question extends Component {
   }
   render() {
     const data = this.props.questionData;
-    const preview = data.preview;
     
     return (
       <div >

@@ -8,10 +8,6 @@ const style = {
     width: '270px',
     height: '480px'
 }
-const fullScreen = {
-    width: "100%",
-    height: "100%"
-}
 const buttonStyle = {
   margin: 12,
 };
