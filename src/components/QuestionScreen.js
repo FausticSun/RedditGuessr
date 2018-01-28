@@ -27,7 +27,17 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',
-    width: "48%"
+    width: "48%",
+    fontSize: '2em'
+    
+  },
+  qnNo : {
+    marginLeft:'4%',
+    float:"left"
+  },
+  score : {
+    marginRight:'7%',
+    float: 'right'
   }
   
 }
@@ -92,9 +102,14 @@ class QuestionScreen extends Component {
           </Paper>
         </div>
         <div style={styles.rightWrapper}>
-          <header className="Question-header">
-            Question Number ({this.state.currentQn+1}) and you have {this.props.score} right
-          </header>
+          <div className="Question-header">
+            <div style={styles.qnNo}>
+              Question {this.state.currentQn+1}/10
+            </div>
+            <div style={styles.score}>
+              Score: {this.props.score}
+            </div>
+          </div>
   
           <Options
             submitWrong={this.submitWrong}
