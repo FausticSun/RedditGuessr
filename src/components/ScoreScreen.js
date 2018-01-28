@@ -4,17 +4,14 @@ import Paper from 'material-ui/Paper'
 import '../App.css';
 import RaisedButton from 'material-ui/RaisedButton';
 
-const style = {
-    width: '270px',
-    height: '480px'
-}
+
 const buttonStyle = {
   margin: 12,
 };
 class ScoreScreen extends Component {
     render() {
         return (
-            <Paper style={style} className="App">
+            <Paper className="App">
                 Score : {this.props.score} /10
                 <RaisedButton
                     label="Replay"

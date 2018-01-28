@@ -63,7 +63,7 @@ class Question extends Component {
             </CardMedia>
             <CardTitle
               title={data.title}
-              subtitle={"Author:" + data.author}
+              subtitle={"Link:" + data.url}
             />
     
           </Card>
@@ -72,7 +72,7 @@ class Question extends Component {
             <Card>
               <CardTitle
                 title={data.title}
-                subtitle={"Author:" + data.author}
+                subtitle={"Author:" + data.msoCommentAuthor}
               />
             </Card>
             :
