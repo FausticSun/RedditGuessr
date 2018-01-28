@@ -14,7 +14,7 @@ const styles = {
     
   },
   label : {
-    fontSize:'0.6em',
+    fontSize:'0.5em',
     height:'inherit',
     display:'flex',
     flexDirection:'column',
