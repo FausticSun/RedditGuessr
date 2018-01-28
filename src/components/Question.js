@@ -5,7 +5,7 @@ import '../App.css';
 
 const style = {
   fixedHeight: {
-    maxHeight: '75vh',
+    maxHeight: '65vh',
     overflow: 'hidden'
   }
 };
@@ -36,7 +36,7 @@ class Question extends Component {
     const data = this.props.questionData;
     
     return (
-      <div >
+      <div style={{height:'auto'}}>
         {data.preview ?
           <Card>
             <CardMedia>
