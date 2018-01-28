@@ -18,9 +18,9 @@ class App extends Component {
     if (prevProps.isLoadingPosts && !this.props.isLoadingPosts) {
       this.props.dispatch(changePage("HomeScreen"));
     }
-    if (this.props.posts.length > 0 && this.props.posts.length < 150) {
+    if (this.props.posts.length > 0 && this.props.posts.length < 180) {
       this.props.dispatch(fetchRedditPosts(this.props.posts[this.props.posts.length - 1].data.name));
-    } else if (this.props.posts.length >= 150) {
+    } else if (this.props.posts.length >= 180) {
       this.props.dispatch(completeLoading());
     }
   }

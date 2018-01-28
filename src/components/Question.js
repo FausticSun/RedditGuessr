@@ -4,13 +4,6 @@ import CircularProgress from 'material-ui/CircularProgress';
 
 import '../App.css';
 
-const style = {
-  fixedHeight: {
-    maxHeight: '65vh',
-    overflow: 'hidden'
-  }
-};
-
 const visibleStyle = {
   width:'100%',
   visibility: 'visible'
