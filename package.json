@@ -1,6 +1,6 @@
 {
   "name": "reddit-guessr",
-  "homepage": "http://fausticsun.github.io/redditguessr",
+  "homepage": "http://fausticsun.github.io/RedditGuessr",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

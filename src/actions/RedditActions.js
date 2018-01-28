@@ -8,7 +8,7 @@ export const LOADING_COMPLETE = 'LOADING_COMPLETE';
 export function fetchRedditPosts(name) {
     return {
         [RSAA]: {
-            endpoint: `http://www.reddit.com/r/popular.json?limit=100&after=${name}`,
+            endpoint: `https://www.reddit.com/r/popular.json?limit=100&after=${name}`,
             method: 'GET',
             types: [REQUEST, SUCCESS, FAILURE]
         }
