@@ -74,6 +74,7 @@ class Question extends Component {
             </CardMedia>
             <CardTitle
               title={data.title}
+              titleStyle={{fontSize: '1.5em',lineHeight:'1.2em'}}
               subtitle={data.is_self ? "Self Post" : displayUrl}
             />
     

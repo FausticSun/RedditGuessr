@@ -10,7 +10,6 @@ const buttonStyle = {
 };
 const styles ={
   app: {
-    fontSize: '2vw',
     display: 'flex',
     flexDirection: "column"
   },
@@ -47,8 +46,8 @@ const redditor = [
 ]
 const message = [
   "Oops! Browse Reddit more!",
-  "Only know a few pages?",
-  "Only know a few pages?",
+  "Only know a few subreddits? Gain more experience!",
+  "Only know a few subreddits? Gain more experience!",
   "Spend more time outside your own Subreddits!",
   "Spend more time outside your own Subreddits!",
   "More experience required",
@@ -62,12 +61,12 @@ class ScoreScreen extends Component {
     render() {
         return (
             <Paper style={styles.app} className="App">
-                <p style={styles.top}>
+                <p className="score-top">
                   Score : {this.props.score} /10
                 </p>
-                <p style={styles.mid}>{redditor[this.props.score]}!</p>
-                <p style={styles.mid2}>{message[this.props.score]}</p>
-                <div style={styles.bottom}>
+                <p className="score-mid">{redditor[this.props.score]}!</p>
+                <p className="score-mid2">{message[this.props.score]}</p>
+                <div className="score-bottom">
                     <RaisedButton
                         label="Replay"
                         primary={true}

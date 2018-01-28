@@ -1,95 +1,144 @@
 .App {
-  width: 40%;
-  height: 80%;
-  text-align: center;
-  font-size: 1.2vw;
+    width: 40%;
+    height: 80%;
+    text-align: center;
+    font-size: 1.2vw;
 }
 
 .App-logo {
-  height: 80px;
+    height: 80px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
 }
+
 .Question-header {
-  flex-direction: row;
-  font-weight: bold;
+    flex-direction: row;
+    font-weight: bold;
 }
+
 #root {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
 }
 
-.fullscreen{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+.fullscreen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
-.leftWrapper{
-  display: flex;
-  justify-content: center;
-  width: 48%;
+.leftWrapper {
+    display: flex;
+    justify-content: center;
+    width: 48%;
 }
-.rightWrapper{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 48%;
-  font-size: 1.4em;
+
+.rightWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 48%;
+    font-size: 1.4em;
 
 }
+
 .questionStyle {
-  width: 80%;
-  align-self: center;
-  top: 5%;
-  left: 5%;
+    width: 80%;
+    align-self: center;
+    top: 5%;
+    left: 5%;
 }
-.questionStyle div div div div span{
+
+.questionStyle div div div div span {
     word-wrap: break-word;
 }
+
 .fixedHeight {
-  max-height: 65vh;
-  overflow: hidden;
+    max-height: 65vh;
+    overflow: hidden;
 }
+
+.score-top {
+    font-size: 3.5vw;
+    flex-grow: 1;
+}
+
+.score-mid {
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.score-mid2 {
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-grow: 1;
+}
+
+.score-bottom {
+    flex-grow: 1;
+}
+
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (orientation: portrait) {
-  .App{
-    width: 100%;
-    height: 100%;
-    font-size:4vw;
-  }
-  .leftWrapper{
-    width: 100%;
-    height: 70%;
-  }
-  .rightWrapper{
-    margin-left: 3%;
-    width: 100%;
-    height: 30%;
-  }
-  .fixedHeight{
-    max-height: 50vh;
-  }
+    .App {
+        width: 100%;
+        height: 100%;
+        font-size: 4vw;
+    }
+
+    .leftWrapper {
+        width: 100%;
+        height: 70%;
+    }
+
+    .rightWrapper {
+        margin-left: 3%;
+        width: 100%;
+        height: 30%;
+    }
+
+    .fixedHeight {
+        max-height: 50vh;
+    }
+
+    .score-top {
+        font-size: 10vw;
+    }
+
+    .score-mid {
+        font-size: 9vw;
+    }
+    .score-mid2 {
+        font-size: 8vw;
+    }
+    .score-bottom{
+        font-size: 8vw;
+    }
+
 }
