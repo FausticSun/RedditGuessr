@@ -23,8 +23,8 @@ class HomeScreen extends Component {
                     <strong>How to play</strong><br/>
                     <ol>
                         <li>Click Start!</li>
-                        <li>Click on the correct option!</li>
-                        <li>Get your score out of 10!</li>
+                        <li>Guess which subreddit the post belongs to!</li>
+                        <li>Find out how seasoned of a Redditor you are!</li>
                     </ol>
                 </p>
                 <RaisedButton
