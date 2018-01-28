@@ -42,14 +42,6 @@ const styles = {
   
 }
 
-const fullscreen = {
-  width: "100%",
-  height: "100%",
-  display: "flex",
-  flexDirection: "row wrap",
-  justifyContent: "space-around"
-}
-
 class QuestionScreen extends Component {
   constructor(props){
     super(props);
@@ -94,13 +86,13 @@ class QuestionScreen extends Component {
 
   render() {
     return (
-      <div style={fullscreen}>
-        <div style={styles.leftWrapper}>
-          <Paper style={styles.questionStyle}>
+      <div className='fullscreen'>
+        <div className='leftWrapper'>
+          <Paper className="questionStyle">
             <Question questionData={this.props.questions[this.state.currentQn].data} />
           </Paper>
         </div>
-        <div style={styles.rightWrapper}>
+        <div className='rightWrapper'>
           <div className="Question-header">
             <div style={styles.qnNo}>
               Question {this.state.currentQn+1}/10

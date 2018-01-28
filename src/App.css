@@ -35,8 +35,57 @@
   width: 100vw;
 }
 
+.fullscreen{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
 
+.leftWrapper{
+  display: flex;
+  justify-content: center;
+  width: 48%;
+}
+.rightWrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 48%;
+  font-size: 1.4em;
+
+}
+.questionStyle {
+  width: 80%;
+  align-self: center;
+  top: 5%;
+  left: 5%;
+}
+.fixedHeight {
+  max-height: 65vh;
+  overflow: hidden;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@media (orientation: portrait) {
+  .App{
+    width: 100%;
+    height: 100%;
+    font-size:4vw;
+  }
+  .leftWrapper{
+    width: 100%;
+    height: 70%;
+  }
+  .rightWrapper{
+    width: 100%;
+    height: 30%;
+  }
+  .fixedHeight{
+    max-height: 50vh;
+  }
 }

@@ -51,7 +51,7 @@ class Question extends Component {
           <Card>
             <CardMedia>
               <a href={data.url} target="_blank">
-              <div style={style.fixedHeight}>
+              <div className="fixedHeight">
               { this.state.isLoading ? <CircularProgress style={ progressStyle } /> : '' }
               {data.preview.images[0].variants.gif ?
                 <img
