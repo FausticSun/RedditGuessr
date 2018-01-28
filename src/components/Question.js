@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Card, CardMedia, CardTitle} from 'material-ui/Card';
+import { Card, CardMedia, CardTitle } from 'material-ui/Card';
+import CircularProgress from 'material-ui/CircularProgress';
 
 import '../App.css';
 
@@ -18,6 +19,15 @@ const visibleStyle = {
 const hiddenStyle = {
   visibility: 'hidden'
 };
+
+const progressStyle = {
+  position: 'absolute',
+  margin: 'auto',
+  left: '0',
+  right: '0',
+  top: '0',
+  bottom: '0'
+}
 
 class Question extends Component {
   constructor(props) {
@@ -42,6 +52,7 @@ class Question extends Component {
             <CardMedia>
               <a href={data.url} target="_blank">
               <div style={style.fixedHeight}>
+              { this.state.isLoading ? <CircularProgress style={ progressStyle } /> : '' }
               {data.preview.images[0].variants.gif ?
                 <img
                   style={ this.state.isLoading ? hiddenStyle : visibleStyle }
