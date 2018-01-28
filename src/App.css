@@ -22,7 +22,8 @@
   font-size: large;
 }
 .Question-header {
-  min-height: none;
+  flex-direction: row;
+  font-weight: bold;
 }
 #root {
   display: flex;
