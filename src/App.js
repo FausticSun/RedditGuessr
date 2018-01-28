@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import sampleSize from 'lodash/sampleSize';
 import { fetchRedditPosts, completeLoading } from './actions/RedditActions';
 import { changePage } from './actions/RoutingActions';
 import LoadingScreen from './components/LoadingScreen';

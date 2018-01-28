@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Paper from 'material-ui/Paper'
-import logo from '../logo.svg';
+import logo from '../images/redditguessr.png';
 import '../App.css';
 import RaisedButton from 'material-ui/RaisedButton';
 
