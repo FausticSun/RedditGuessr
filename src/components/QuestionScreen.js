@@ -96,7 +96,7 @@ class QuestionScreen extends Component {
     return (
       <div style={fullscreen}>
         <div style={styles.leftWrapper}>
-          <Paper style={styles.questionStyle} className="App">
+          <Paper style={styles.questionStyle}>
             <Question questionData={this.props.questions[this.state.currentQn].data} />
           </Paper>
         </div>

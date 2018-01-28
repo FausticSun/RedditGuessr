@@ -34,7 +34,7 @@ class Question extends Component {
   }
   render() {
     const data = this.props.questionData;
-    
+    const displayUrl = data.url > 40 ? data.url.substring(0,40) + '...' : data.url;
     return (
       <div style={{height:'auto'}}>
         {data.preview ?
@@ -63,7 +63,7 @@ class Question extends Component {
             </CardMedia>
             <CardTitle
               title={data.title}
-              subtitle={"Link:" + data.url}
+              subtitle={data.is_self ? "Self Post" : displayUrl}
             />
     
           </Card>
@@ -72,12 +72,16 @@ class Question extends Component {
             <Card>
               <CardTitle
                 title={data.title}
-                subtitle={"Author:" + data.msoCommentAuthor}
+                subtitle={"Self Post"}
               />
             </Card>
             :
-            <div>lmao no fokkin preview</div>
-          
+            <Card>
+              <CardTitle
+                title={data.title}
+                subtitle={"Self Post"}
+              />
+            </Card>
         }
       </div>
     );
