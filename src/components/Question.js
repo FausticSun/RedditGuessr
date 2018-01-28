@@ -5,7 +5,7 @@ import '../App.css';
 
 const style = {
   fixedHeight: {
-    maxHeight: '75vh',
+    maxHeight: '65vh',
     overflow: 'hidden'
   }
 };
@@ -36,7 +36,7 @@ class Question extends Component {
     const data = this.props.questionData;
     
     return (
-      <div >
+      <div style={{height:'auto'}}>
         {data.preview ?
           <Card>
             <CardMedia>
@@ -63,7 +63,7 @@ class Question extends Component {
             </CardMedia>
             <CardTitle
               title={data.title}
-              subtitle={"Author:" + data.author}
+              subtitle={"Link:" + data.url}
             />
     
           </Card>
@@ -72,7 +72,7 @@ class Question extends Component {
             <Card>
               <CardTitle
                 title={data.title}
-                subtitle={"Author:" + data.author}
+                subtitle={"Author:" + data.msoCommentAuthor}
               />
             </Card>
             :
